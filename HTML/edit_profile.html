@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/edit_profile.css" />
+    <title>Edit</title>
+  </head>
+  <body>
+    <header class="admin-header">
+      <h1>Articles</h1>
+      <nav>
+        <a href="articles.html">Home</a>
+        <select name="choice">
+          <option id="dis" value="" disabled selected>Review</option>
+          <option value="Edited">Edited</option>
+          <option value="New">New</option>
+        </select>
+        <a href="new_article.html">Add Article</a>
+        <a href="user_profile.html">User</a>
+        <a href="index.html">Log out</a>
+      </nav>
+    </header>
+    <header class="user-header">
+      <h1>Articles</h1>
+      <nav>
+        <a href="articles.html">Home</a>
+        <a href="new_article.html">Add Article</a>
+        <a href="user_profile.html">User</a>
+        <a href="index.html">Log out</a>
+      </nav>
+    </header>
+    <div class="card">
+      <h2>User information</h2>
+      <form>
+        <div class="info">
+          <div class="form-group">
+            <p>Username taken</p>
+            <label>Username</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Username"
+              value="john28"
+            />
+          </div>
+          <div class="form-group">
+            <label>First name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="First name"
+              value="John"
+            />
+          </div>
+          <div class="form-group">
+            <label>Last name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Last name"
+              value="Doe"
+            />
+          </div>
+          <div class="form-group">
+            <p>Invalid email</p>
+            <label>Email</label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email"
+              value="johndoe@gmail.com"
+            />
+          </div>
+          <div class="form-group">
+            <p>Invalid phone</p>
+            <label>Phone</label>
+            <input
+              type="tel"
+              class="form-control"
+              placeholder="Phone"
+              value="099888766"
+            />
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              value="password1111"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+    <input type="submit" value="Submit" />
+  </body>
+</html>
