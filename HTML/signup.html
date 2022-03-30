@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../CSS/signup.css" />
+  </head>
+
+  <body>
+    <div class="center">
+      <h1>Sign Up</h1>
+      <form method="post">
+        <p>Username taken</p>
+        <div class="text-field">
+          <input type="text" required />
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="text-field">
+          <input type="text" required />
+          <span></span>
+          <label>First Name</label>
+        </div>
+        <div class="text-field">
+          <input type="text" required />
+          <span></span>
+          <label>Last Name</label>
+        </div>
+        <p>Invalid email</p>
+        <div class="text-field">
+          <input type="email" required />
+          <span></span>
+          <label>Email</label>
+        </div>
+        <p>Invalid phone</p>
+        <div class="text-field">
+          <input type="tel" required />
+          <span></span>
+          <label>Phone</label>
+        </div>
+        <div class="text-field">
+          <input type="password" required />
+          <span></span>
+          <label>Password</label>
+        </div>
+        <div class="moderator">
+          <p>Are you a moderator?</p>
+          <div class="radio">
+            <input type="radio" name="moderator" value="Yes" />
+            <label>Yes</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="moderator" value="No" />
+            <label>No</label>
+          </div>
+        </div>
+        <input type="submit" value="Sign Up" />
+        <div class="login">
+          Already have an account? <a href="login.html">Log in</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
