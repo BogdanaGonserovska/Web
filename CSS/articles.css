@@ -80,6 +80,7 @@ body {
   overflow: hidden;
   padding: 20px 10px;
   background-color: #51a7a7;
+  display: none;
 }
 
 .user-header a {
