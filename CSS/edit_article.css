@@ -84,6 +84,7 @@ body {
   overflow: hidden;
   padding: 20px 10px;
   background-color: #51a7a7;
+  display: none;
 }
 
 .user-header a {
@@ -160,13 +161,13 @@ body {
   padding: 20px 20px;
   text-align: justify;
   background-color: #e4e0e0;
-  width: 990px;
+  width: 100%;
   border-style: hidden;
   font-size: 24px;
   font-weight: 400;
 }
 
-input[type="submit"] {
+button {
   width: 100px;
   height: 50px;
   border: 1px solid;
@@ -180,7 +181,7 @@ input[type="submit"] {
   display: block;
 }
 
-input[type="submit"]:hover {
+button:hover {
   border-color: #51a7a7;
   -webkit-transition: 0.5s;
   transition: 0.5s;

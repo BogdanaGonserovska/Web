@@ -12,14 +12,10 @@
       <h1>Articles</h1>
       <nav>
         <a href="articles.html">Home</a>
-        <select name="choice">
-          <option id="dis" value="" disabled selected>Review</option>
-          <option value="Edited">Edited</option>
-          <option value="New">New</option>
-        </select>
+        <a href="reviews.html">Review</a>
         <a href="new_article.html">Add Article</a>
         <a href="user_profile.html">User</a>
-        <a href="index.html">Log out</a>
+        <a href="index.html" onclick="logout()">Log out</a>
       </nav>
     </header>
     <header class="user-header">
@@ -33,16 +29,16 @@
     </header>
     <div class="card">
       <h2>User information</h2>
-      <form>
+      <form action="D:\NULP\4 term\pplabs\app.py" onsubmit="edit()">
         <div class="info">
           <div class="form-group">
-            <p>Username taken</p>
+            <p>Username or email taken</p>
             <label>Username</label>
             <input
               type="text"
               class="form-control"
               placeholder="Username"
-              value="john28"
+              id="username"
             />
           </div>
           <div class="form-group">
@@ -51,7 +47,7 @@
               type="text"
               class="form-control"
               placeholder="First name"
-              value="John"
+              id="firstname"
             />
           </div>
           <div class="form-group">
@@ -60,41 +56,31 @@
               type="text"
               class="form-control"
               placeholder="Last name"
-              value="Doe"
+              id="lastname"
             />
           </div>
           <div class="form-group">
-            <p>Invalid email</p>
             <label>Email</label>
             <input
               type="email"
               class="form-control"
               placeholder="Email"
-              value="johndoe@gmail.com"
+              id="email"
             />
           </div>
           <div class="form-group">
-            <p>Invalid phone</p>
             <label>Phone</label>
             <input
               type="tel"
               class="form-control"
               placeholder="Phone"
-              value="099888766"
+              id="phone"
             />
           </div>
-          <div class="form-group">
-            <label>Password</label>
-            <input
-              type="password"
-              class="form-control"
-              placeholder="Password"
-              value="password1111"
-            />
-          </div>
+          <input type="submit" value="Submit" />
         </div>
       </form>
     </div>
-    <input type="submit" value="Submit" />
+    <script src="../JS/edit_submit.js"></script>
   </body>
 </html>

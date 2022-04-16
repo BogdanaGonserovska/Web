@@ -87,6 +87,7 @@ body {
   overflow: hidden;
   padding: 20px 10px;
   background-color: $main-color;
+  display: none;
   a {
     color: $white;
     text-decoration: none;
@@ -176,7 +177,7 @@ input[type="submit"] {
   color: $white;
   font-weight: 700;
   cursor: pointer;
-  margin: 40px auto;
+  margin: 15px auto;
   display: block;
 
   &:hover {
@@ -188,5 +189,5 @@ input[type="submit"] {
 p {
   color: $red;
   margin-top: 20px;
-  display: none;
+  visibility: hidden;
 }

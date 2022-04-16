@@ -12,14 +12,10 @@
       <h1>Articles</h1>
       <nav>
         <a href="articles.html">Home</a>
-        <select name="choice">
-          <option id="dis" value="" disabled selected>Review</option>
-          <option value="Edited">Edited</option>
-          <option value="New">New</option>
-        </select>
+        <a href="reviews.html">Review</a>
         <a href="new_article.html">Add Article</a>
         <a href="user_profile.html">User</a>
-        <a href="index.html">Log out</a>
+        <a href="index.html" onclick="logout()">Log out</a>
       </nav>
     </header>
     <header class="user-header">
@@ -40,7 +36,7 @@
         />
       </div>
       <div class="content">
-        <textarea rows="27" cols="140" name="description">
+        <textarea rows="auto" cols="140" name="description">
 Lviv Polytechnic National University is the largest scientific university in Lviv. Since its foundation in 1816,[1] it has been one of the most important centres of science and technological development in Central Europe. In the interbellum period, the Polytechnic was one of the most important technical colleges in Poland, together with the Warsaw Polytechnic. In 2020, Lviv Polytechnic was ranked globally among the top 1000 universities according to Times Higher Education.[2] As of 2019, there were approximately 35,000 students in the university.[3]The history of the Lviv Polytechnic National University begins during the Austrian Empire, and extends through the Second Polish Republic, the Nazi Occupation, the Soviet Union, and into independent Ukraine.
 On March 7, 1816 , the Tsisar-Royal Real School was opened in Lemberg (Lviv). A technical school was established with the help of the newly introduced local industrial tax. In the curricula of the Royall School, the main focus was assigned to the subjects of the natural-mathematical cycle, drawing, drawing and the study of new modern languages. The royal-school educational process was based on German educational programs that were adapted to local requirements. The newly created Royal School was housed in a beautiful building at number 20 on the then-current Pekarska Street (now Virmenska).
 In 1825, according to the Royal Decree of the Austrian Emperor Franz I, the three-level Tsissar-Royal Real School was reorganised into the Tsissar-Royal School of Technical Sciences and Trade in Lviv.
@@ -52,6 +48,7 @@ Since 1921 the institution has been called "Lviv Polytechnic", and since 1939 - 
         </textarea>
       </div>
     </div>
-    <input type="submit" value="Submit" />
+    <button onclick="edit_article()">Submit</button>
+    <script src="../JS/edit_article.js"></script>
   </body>
 </html>

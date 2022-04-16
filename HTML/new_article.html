@@ -12,14 +12,10 @@
       <h1>Articles</h1>
       <nav>
         <a href="articles.html">Home</a>
-        <select name="choice">
-          <option id="dis" value="" disabled selected>Review</option>
-          <option value="Edited">Edited</option>
-          <option value="New">New</option>
-        </select>
+        <a href="reviews.html">Review</a>
         <a href="new_article.html">Add Article</a>
         <a href="user_profile.html">User</a>
-        <a href="index.html">Log out</a>
+        <a href="index.html" onclick="logout()">Log out</a>
       </nav>
     </header>
     <header class="user-header">
@@ -43,6 +39,7 @@
         ></textarea>
       </div>
     </div>
-    <input type="submit" value="Submit" />
+    <button onclick="new_article()">Submit</button>
+    <script src="../JS/new_article.js"></script>
   </body>
 </html>

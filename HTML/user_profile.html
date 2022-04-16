@@ -12,14 +12,10 @@
       <h1>Articles</h1>
       <nav>
         <a href="articles.html">Home</a>
-        <select name="choice">
-          <option id="dis" value="" disabled selected>Review</option>
-          <option value="Edited">Edited</option>
-          <option value="New">New</option>
-        </select>
+        <a href="reviews.html">Review</a>
         <a href="new_article.html">Add Article</a>
         <a href="user_profile.html">User</a>
-        <a href="index.html">Log out</a>
+        <a href="index.html" onclick="logout()">Log out</a>
       </nav>
     </header>
     <header class="user-header">
@@ -28,7 +24,7 @@
         <a href="articles.html">Home</a>
         <a href="new_article.html">Add Article</a>
         <a href="user_profile.html">User</a>
-        <a href="index.html">Log out</a>
+        <a href="index.html" onclick="logout()">Log out</a>
       </nav>
     </header>
     <div class="user">
@@ -37,41 +33,42 @@
           <div class="col">
             <p class="field">Username</p>
           </div>
-          <div class="info">john28</div>
+          <div class="info" id="username"></div>
         </div>
         <hr />
         <div class="row">
           <div class="col">
             <p class="field">First Name</p>
           </div>
-          <div class="info">John</div>
+          <div class="info" id="firstname"></div>
         </div>
         <hr />
         <div class="row">
           <div class="col">
             <p class="field">Last Name</p>
           </div>
-          <div class="info">Doe</div>
+          <div class="info" id="lastname"></div>
         </div>
         <hr />
         <div class="row">
           <div class="col">
             <p class="field">Email</p>
           </div>
-          <div class="info">johndoe@gmail.com</div>
+          <div class="info" id="email"></div>
         </div>
         <hr />
         <div class="row">
           <div class="col">
             <p class="field">Phone</p>
           </div>
-          <div class="info">0998887766</div>
+          <div class="info" id="phone"></div>
         </div>
       </div>
       <div class="links">
         <a href="edit_profile.html">Edit</a>
-        <a href="#">Delete</a>
+        <a href="index.html" onclick="delete_user()">Delete</a>
       </div>
     </div>
+    <script src="../JS/user_profile.js"></script>
   </body>
 </html>
