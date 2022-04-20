@@ -42,7 +42,7 @@ if (form) {
         }).then((response) => response.json())
             .then((data) => {
                 localStorage.setItem("user", JSON.stringify(data));
-                window.open("http://127.0.0.1:5500/HTML/articles.html", "_self");
+                window.open("articles.html", "_self");
             }
             )
             .catch(() => {

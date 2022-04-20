@@ -29,7 +29,7 @@ function new_article() {
         }
     });
     window.alert('Thanks for your article!\nYour version will be reviewed soon.');
-    window.open("http://127.0.0.1:5500/HTML/articles.html", "_self");
+    window.open("articles.html", "_self");
 }
 
 function logout() {

@@ -49,7 +49,7 @@ if (form) {
         }).then((response) => {
             if (response.ok) {
                 alert('Succesfully edited');
-                location.replace("http://127.0.0.1:5500/HTML/user_profile.html?");
+                location.replace("user_profile.html");
             }
             else {
                 alert('Username or email already taken');

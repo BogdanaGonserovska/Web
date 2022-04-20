@@ -36,7 +36,7 @@ function edit_article() {
         }
     });
     window.alert('Thanks for your editing!\nYour version will be reviewed soon.');
-    window.open("http://127.0.0.1:5500/HTML/article.html", "_self");
+    window.open("article.html", "_self");
 }
 
 function logout() {
