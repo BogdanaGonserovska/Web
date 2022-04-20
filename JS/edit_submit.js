@@ -23,40 +23,44 @@ function logout() {
     localStorage.removeItem("user");
 }
 
-function edit() {
-    let username = document.getElementById("username").value;
-    let firstName = document.getElementById("firstname").value;
-    let lastName = document.getElementById("lastname").value;
-    let email = document.getElementById("email").value;
-    let phone = document.getElementById("phone").value;
-    fetch(`http://127.0.0.1:5000/user/edit_profile`, {
-        method: "PUT",
-        body: JSON.stringify({
-            username: username,
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            phone: phone
-        }),
-        headers: {
-            "Content-Type": "application/json",
-            'Authorization': 'Basic ' + btoa(user.username + ':' + user.password)
-        },
+const form = document.getElementsByTagName('form')[0];
+if (form) {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let username = document.getElementById("username").value;
+        let firstName = document.getElementById("firstname").value;
+        let lastName = document.getElementById("lastname").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        fetch(`http://127.0.0.1:5000/user/edit_profile`, {
+            method: "PUT",
+            body: JSON.stringify({
+                username: username,
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                phone: phone
+            }),
+            headers: {
+                "Content-Type": "application/json",
+                'Authorization': 'Basic ' + btoa(user.username + ':' + user.password)
+            },
 
-    }).then((response) => {
-        if (response.ok) {
-            alert('Succesfully edited');
-            location.replace("http://127.0.0.1:5500/HTML/user_profile.html?");
-        }
-        else {
-            alert('Username or email already taken');
-        }
-        return response.json();
+        }).then((response) => {
+            if (response.ok) {
+                alert('Succesfully edited');
+                location.replace("http://127.0.0.1:5500/HTML/user_profile.html?");
+            }
+            else {
+                alert('Username or email already taken');
+            }
+            return response.json();
+        })
+            .then((data) => {
+                localStorage.setItem("user", JSON.stringify(data));
+            })
+            .catch(() => {
+                document.getElementsByTagName("P")[0].style.visibility = "visible";
+            })
     })
-        .then((data) => {
-            localStorage.setItem("user", JSON.stringify(data));
-        })
-        .catch(() => {
-            document.getElementsByTagName("P")[0].style.visibility = "visible";
-        })
 }
