@@ -15,17 +15,15 @@ if (form) {
             headers: {
                 "Content-Type": "application/json"
             },
-        }).then((response) => {
-            if (!response.ok) {
-                document.getElementsByTagName("P")[0].style.visibility = "visible";
-            }
-            return response.json()
-        })
+        }).then((response) => response.json())
             .then((data) => {
                 localStorage.setItem("user", JSON.stringify(data));
                 window.open("articles.html", "_self");
             }
             )
+            .catch(() => {
+                document.getElementsByTagName("P")[0].style.visibility = "visible";
+            })
     }
     )
 
