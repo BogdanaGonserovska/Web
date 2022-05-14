@@ -43,7 +43,7 @@ const SignUp = () => {
         }).then((response) => response.json())
             .then((data) => {
                 localStorage.setItem("user", JSON.stringify(data));
-                window.open("/user", "_self");
+                window.open("/articles", "_self");
             }
             )
             .catch(() => {

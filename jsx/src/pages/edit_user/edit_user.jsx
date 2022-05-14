@@ -77,14 +77,11 @@ const Edit = () => {
             <header className='head'>
                 <h1 className='articles'>Articles</h1>
                 <nav className='nav'>
-                    <a className='headerlink' href="articles.html">Home</a>
+                    <a className='headerlink' href="/articles">Home</a>
                     {user.isModerator ? (
-
-                        <a className='headerlink' href="reviews.html">Review</a>
-
+                        <a className='headerlink' href="/reviews">Review</a>
                     ) : (<></>)}
-
-                    <a className='headerlink' href="new_article.html">Add Article</a>
+                    <a className='headerlink' href="/new_article">Add Article</a>
                     <a className='headerlink' href="/user">User</a>
                     <a className='headerlink' href="/" onClick={logout}>Log out</a>
                 </nav>
