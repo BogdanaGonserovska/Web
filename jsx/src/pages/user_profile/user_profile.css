@@ -39,16 +39,16 @@ body {
   float: right;
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 880px) {
   .articles {
     float: none;
     display: block;
-    margin-bottom: 0;
   }
   .headerlink {
     float: none;
     display: block;
-    padding: 10px 20px;
+    padding: 20px 20px;
+    margin: 0px 15px;
   }
   .nav {
     float: none;
@@ -77,8 +77,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 27px;
-  padding-bottom: 27px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   text-align: left;
 }
 

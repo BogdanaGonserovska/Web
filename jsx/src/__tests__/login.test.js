@@ -7,7 +7,7 @@ import fetchMock from 'jest-fetch-mock';
 import { act } from 'react-dom/test-utils';
 
 fetchMock.enableMocks();
-const successResponse = 'logged_in';
+const successResponse = 'user';
 describe('Login page', () => {
 
     it('renders login with form', () => {
@@ -33,7 +33,4 @@ describe('Login page', () => {
         await expect(fetch)
             .toHaveBeenCalledTimes(1);
     });
-
-
-
 });
