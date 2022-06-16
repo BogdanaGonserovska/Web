@@ -10,22 +10,7 @@ const SignUp = () => {
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
         const phone = document.getElementById("phone").value;
-        let isModerator;
 
-        const radioButtons = document.querySelectorAll(
-            'input[name="moderator"]'
-        );
-        for (const radioButton of radioButtons) {
-            if (radioButton.checked) {
-                isModerator = radioButton.value;
-                break;
-            }
-        }
-        if (isModerator === "Yes") {
-            isModerator = 1;
-        } else {
-            isModerator = 0;
-        }
         fetch(`http://127.0.0.1:5000/user`, {
             method: "POST",
             body: JSON.stringify({
@@ -35,7 +20,7 @@ const SignUp = () => {
                 email: email,
                 phone: phone,
                 password: password,
-                isModerator: isModerator,
+                isModerator: 0,
             }),
             headers: {
                 "Content-Type": "application/json",
@@ -84,17 +69,6 @@ const SignUp = () => {
                     <input type="password" id="password" required />
                     <span></span>
                     <label>Password</label>
-                </div>
-                <div className="moderator">
-                    <p className="question">Are you a moderator?</p>
-                    <div className="radio">
-                        <input type="radio" name="moderator" value="Yes" />
-                        <label> Yes</label>
-                    </div>
-                    <div className="radio">
-                        <input type="radio" name="moderator" value="No" />
-                        <label> No</label>
-                    </div>
                 </div>
                 <input className="signsub" type="submit" value="Sign Up" />
                 <div className="loginb">

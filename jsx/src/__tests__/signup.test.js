@@ -7,15 +7,15 @@ import fetchMock from 'jest-fetch-mock';
 import { act } from 'react-dom/test-utils';
 
 fetchMock.enableMocks();
-const successResponse = 'logged_in';
-describe('Login page', () => {
+const successResponse = 'user';
+describe('Sign up page', () => {
 
-    it('renders login with form', () => {
+    it('renders signup with form', () => {
         render(<Router><SignUp /> </Router>);
         expect(screen.getAllByRole('textbox'));
     });
 
-    it('tests user login', async () => {
+    it('tests user signup', async () => {
         await act(async () => {
             fetch.mockReturnValue(Promise.resolve(new Response(successResponse)));
             render(<Router><SignUp /></Router>);
@@ -33,7 +33,4 @@ describe('Login page', () => {
         await expect(fetch)
             .toHaveBeenCalledTimes(1);
     });
-
-
-
 });
